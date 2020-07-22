@@ -3,7 +3,7 @@
 #include <QFile>
 #include <QProcess>
 #include <QMessageBox>
-
+#include "widget.h"
 filethread::filethread(QObject *parent) : QThread(parent)
 {
 
@@ -50,8 +50,15 @@ void filethread::run()
     if(QFile::exists(curPath+"/lib/NAClient"))
     {
         iscopyright=true;
-        QString str = curPath+"/lib/start.sh &";
-        system(str.toLatin1());
+#ifdef Q_OS_ANDROID
+    QAndroidJniObject::callStaticMethod<void>(
+                "org/QtAndroidService",
+                "startQtAndroidService",
+                "(Landroid/content/Context;)V",
+                QtAndroid::androidActivity().object());
+#endif
+ //       QString str = curPath+"/lib/start.sh &";
+ //       system(str.toLatin1());
         emit over();
         return;
     }

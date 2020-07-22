@@ -7,7 +7,7 @@
    "toolchain-prefix": "llvm",
    "tool-prefix": "llvm",
    "ndk-host": "windows-x86_64",
-   "architectures": {"arm64-v8a":"aarch64-linux-android"},
+   "architectures": {"armeabi-v7a":"arm-linux-androideabi"},
    "android-package-source-directory": "C:/Users/Administrator/Documents/untitled/android",
    "qml-root-path": "C:/Users/Administrator/Documents/untitled",
    "stdcpp-path": "C:\\ndk\\android-ndk-r21/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/",

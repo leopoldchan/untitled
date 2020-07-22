@@ -50,7 +50,8 @@ DISTFILES += \
     android/gradlew \
     android/gradlew.bat \
     android/res/values/libs.xml \
-    android/src/org/MyJavaClass.java
+    android/src/org/MyJavaClass.java \
+    android/src/org/QtAndroidService.java
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
