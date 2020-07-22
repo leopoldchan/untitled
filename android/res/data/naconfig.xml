@@ -1,0 +1,52 @@
+<NACONFIG version="1.0">
+  <COMMON>
+    <!-- 代理工作模式：0-多线程 1-多进程 -->
+    <ProxySerMode>0</ProxySerMode>
+    <!-- 本地代理端口 -->
+    <LocalProxyPort>1080</LocalProxyPort>
+    <RelayTimeOut>10</RelayTimeOut>
+    <IsSupportProxy>1</IsSupportProxy>
+    <IsProxyMode>0</IsProxyMode>
+    <IsLocalProxySetting>0</IsLocalProxySetting>
+    <ProxyProtocolSetting>2</ProxyProtocolSetting>
+    <IsAccessSwitchSetting>0</IsAccessSwitchSetting>
+  </COMMON>
+  <ASADDR>
+    <item as_ip="0.0.0.0" as_port="1080" as_type="1"></item>
+  </ASADDR>
+  <!-- type: 0-240AG 1-311AG 2-208/209AG -->
+  <AGLIST count="0">
+    <item index="0" ag_ip="10.106.14.58" ag_port="1080" type="1"></item>
+  </AGLIST>
+  <!-- type: 1-311RG 0-240RG -->
+  <RGLIST count="0"></RGLIST>
+  <ASTYPEDEFAULT count="2">
+    <item index="0" type="0" value="918AS"></item>
+    <item index="1" type="1" value="311AS"></item>
+  </ASTYPEDEFAULT>
+  <RGTYPEDEFAULT count="4">
+    <item index="0" type="0" value="208/209RG"></item>
+    <item index="1" type="1" value="311RG"></item>
+    <item index="2" type="2" value="918RG"></item>
+    <item index="3" type="3" value="231RG"></item>
+    <!-- 240RG -->
+    <!-- <item index="0" type="0" value="分级代理"></item> -->
+    <!-- 311RG -->
+    <!-- <item index="1" type="1" value="311代理"></item> -->
+  </RGTYPEDEFAULT>
+  <AGTYPEDEFAULT count="4">
+    <item index="0" type="0" value="240AG"></item>
+    <item index="1" type="1" value="311AG"></item>
+    <item index="2" type="2" value="208/209AG"></item>
+    <item index="3" type="3" value="918AG"></item>
+    <!-- 240AG -->
+    <!-- <item index="0" type="0" value="分级网关"></item> -->
+    <!-- 311AG -->
+    <!-- <item index="1" type="1" value="311网关"></item> -->
+    <!-- 208/209AG -->
+    <!-- <item index="2" type="2" value="208/209网关"></item> -->
+  </AGTYPEDEFAULT>
+  <RGLIST_ONLINE count="0">
+    <item index="0" dst_ip="10.107.52.100" dst_port="80" proxy_ip="10.106.14.225" proxy_port="1080" type="2"></item>
+  </RGLIST_ONLINE>
+</NACONFIG>

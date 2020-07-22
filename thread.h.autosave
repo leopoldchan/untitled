@@ -1,0 +1,18 @@
+#ifndef FILETHREAD_H
+#define FILETHREAD_H
+
+#include <QThread>
+
+class filethread : public QThread
+{
+public:
+    explicit filethread(QObject *parent = nullptr);
+protected:
+    void run();//多线程执行的内容将通过重新该虚函数实现
+private:
+    bool copyDirectoryFiles(const QString &fromDir, const QString &toDir, bool coverFileIfExist);
+signals:
+    void over();
+};
+
+#endif // FILETHREAD_H
